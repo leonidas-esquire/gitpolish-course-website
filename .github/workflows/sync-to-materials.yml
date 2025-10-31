@@ -1,0 +1,24 @@
+name: Sync Documentation to Materials
+
+on:
+  push:
+    branches: [master, main]
+    paths:
+      - 'LMS_IMPLEMENTATION_PLAN.md'
+      - 'docs/ARCHITECTURE.md'
+      - 'README.md'
+  workflow_dispatch:
+
+jobs:
+  sync-to-materials:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout website repository
+        uses: actions/checkout@v4
+        
+      - name: Trigger materials repository sync
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.SYNC_TOKEN }}
+          repository: leonidas-esquire/gitpolish-protocol-course
+          event-type: sync-from-website
