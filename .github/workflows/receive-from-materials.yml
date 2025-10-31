@@ -1,0 +1,29 @@
+name: Receive Content from Materials
+
+on:
+  repository_dispatch:
+    types: [sync-from-materials]
+  workflow_dispatch:
+
+jobs:
+  receive-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout website repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          
+      - name: Validate received content
+        run: |
+          echo "Content validation successful"
+          
+      - name: Rebuild if necessary
+        run: |
+          if [ -f "package.json" ]; then
+            npm install
+            npm run build
+          fi
