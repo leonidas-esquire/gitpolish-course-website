@@ -1,24 +1,79 @@
-name: Sync Documentation to Materials
+name: Sync Website Updates to Course Materials
 
 on:
   push:
-    branches: [master, main]
+    branches:
+      - master
     paths:
-      - 'LMS_IMPLEMENTATION_PLAN.md'
-      - 'docs/ARCHITECTURE.md'
-      - 'README.md'
+      - 'public/course-materials/**'
+      - 'public/docs/**'
+      - 'public/templates/**'
+      - 'public/resources/**'
   workflow_dispatch:
 
 jobs:
   sync-to-materials:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    
     steps:
       - name: Checkout website repository
         uses: actions/checkout@v4
-        
-      - name: Trigger materials repository sync
-        uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.SYNC_TOKEN }}
+          fetch-depth: 0
+          path: website
+      
+      - name: Checkout course materials repository
+        uses: actions/checkout@v4
+        with:
           repository: leonidas-esquire/gitpolish-protocol-course
-          event-type: sync-from-website
+          token: ${{ secrets.SYNC_TOKEN }}
+          fetch-depth: 0
+          path: materials
+      
+      - name: Sync website updates to course materials
+        run: |
+          # Sync directories back to materials repository
+          rsync -av --delete website/public/course-materials/ materials/course-materials/
+          rsync -av --delete website/public/docs/ materials/docs/
+          rsync -av --delete website/public/templates/ materials/templates/
+          rsync -av --delete website/public/resources/ materials/resources/
+      
+      - name: Commit and push changes
+        working-directory: materials
+        run: |
+          git config user.name "GitPolish Sync Bot"
+          git config user.email "sync-bot@gitpolish-course.local"
+          
+          git add .
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "sync: Update from gitpolish-course-website | Automated sync from website repository | Updated: course-materials, docs, templates, resources | Timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          fi
+      
+      - name: Trigger receive workflow in materials repo
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: token ${{ secrets.SYNC_TOKEN }}" \
+            https://api.github.com/repos/leonidas-esquire/gitpolish-protocol-course/dispatches \
+            -d '{"event_type":"website-update"}'
+      
+      - name: Create sync report
+        if: always()
+        run: |
+          echo "## Sync Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Source**: gitpolish-course-website" >> $GITHUB_STEP_SUMMARY
+          echo "**Target**: gitpolish-protocol-course" >> $GITHUB_STEP_SUMMARY
+          echo "**Timestamp**: $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Synced Directories" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ course-materials/" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ docs/" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ templates/" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ resources/" >> $GITHUB_STEP_SUMMARY
