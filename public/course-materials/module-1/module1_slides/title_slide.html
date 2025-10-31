@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1: GitPolish Foundations & Repository Setup</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Roboto+Mono:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #1E1E1E;
+            font-family: 'Source Code Pro', monospace;
+            color: #D4D4D4;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .terminal-header {
+            background: #2D2D30;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            border-bottom: 1px solid #3E3E42;
+        }
+        
+        .window-controls {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .control-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .dot-red { background: #FF5F56; }
+        .dot-yellow { background: #FFBD2E; }
+        .dot-green { background: #27C93F; }
+        
+        .terminal-title {
+            margin-left: 20px;
+            font-size: 13px;
+            color: #CCCCCC;
+            font-family: 'Roboto Mono', monospace;
+        }
+        
+        .main-content {
+            display: flex;
+            min-height: 685px;
+            padding: 60px 80px;
+            gap: 60px;
+        }
+        
+        .text-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .visual-section {
+            width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .module-label {
+            font-family: 'Fira Code', monospace;
+            font-size: 18px;
+            color: #569CD6;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        
+        .module-label::before {
+            content: '// ';
+            color: #6A9955;
+        }
+        
+        .main-title {
+            font-family: 'Fira Code', monospace;
+            font-size: 64px;
+            font-weight: 700;
+            color: #4EC9B0;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(78, 201, 176, 0.3);
+        }
+        
+        .subtitle {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 32px;
+            color: #D4D4D4;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+        
+        .course-badge {
+            display: inline-block;
+            font-family: 'Source Code Pro', monospace;
+            font-size: 20px;
+            color: #CE9178;
+            padding: 12px 24px;
+            border: 2px solid #CE9178;
+            border-radius: 4px;
+            background: rgba(206, 145, 120, 0.1);
+        }
+        
+        .course-badge::before {
+            content: '$ ';
+            color: #4EC9B0;
+        }
+        
+        .github-visual {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #3E3E42;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .grid-overlay {
+            position: absolute;
+            top: 35px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(rgba(86, 156, 214, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(86, 156, 214, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+        
+        .command-prompt {
+            position: absolute;
+            bottom: 20px;
+            left: 80px;
+            font-family: 'Fira Code', monospace;
+            font-size: 14px;
+            color: #6A9955;
+        }
+        
+        .command-prompt .path {
+            color: #569CD6;
+        }
+        
+        .command-prompt .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background: #4EC9B0;
+            margin-left: 5px;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="terminal-header">
+            <div class="window-controls">
+                <div class="control-dot dot-red"></div>
+                <div class="control-dot dot-yellow"></div>
+                <div class="control-dot dot-green"></div>
+            </div>
+            <div class="terminal-title">gitpolish-certification/module-1 — GitPolish Protocol™</div>
+        </div>
+        
+        <div class="grid-overlay"></div>
+        
+        <div class="main-content">
+            <div class="text-section">
+                <div class="module-label">MODULE 01</div>
+                <h1 class="main-title">GitPolish Foundations & Repository Setup</h1>
+                <p class="subtitle">Building Professional GitHub Repositories from the Ground Up</p>
+                <div class="course-badge">GitPolish Protocol™ Certification Course</div>
+            </div>
+            
+            <div class="visual-section">
+                <img src="/home/ubuntu/module1_slides/github_animation.gif" alt="GitHub Project Management" class="github-visual">
+            </div>
+        </div>
+        
+        <div class="command-prompt">
+            <span class="path">~/gitpolish-certification/module-1</span> $ start_learning<span class="cursor"></span>
+        </div>
+    </div>
+</body>
+</html>

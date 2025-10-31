@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{SLIDE_TITLE}}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Source+Code+Pro:wght@400;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background: #0a0a0a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #1E1E1E;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+        }
+        .terminal-header {
+            background: #2D2D2D;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid #3E3E3E;
+        }
+        .terminal-button { width: 12px; height: 12px; border-radius: 50%; }
+        .btn-close { background: #FF5F56; }
+        .btn-minimize { background: #FFBD2E; }
+        .btn-maximize { background: #27C93F; }
+        .terminal-title {
+            margin-left: 16px;
+            color: #D4D4D4;
+            font-size: 13px;
+            font-family: 'Source Code Pro', monospace;
+        }
+        .content {
+            flex: 1;
+            padding: 50px 70px;
+        }
+        .slide-title {
+            font-family: 'Fira Code', monospace;
+            font-size: 36px;
+            font-weight: 700;
+            color: #4EC9B0;
+            margin-bottom: 40px;
+        }
+        .slide-content {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 18px;
+            color: #D4D4D4;
+            line-height: 1.8;
+        }
+        .slide-content h2 {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 24px;
+            color: #569CD6;
+            margin: 30px 0 15px 0;
+        }
+        .slide-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .slide-content li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+        .slide-content li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #CE9178;
+        }
+        .highlight {
+            color: #CE9178;
+            font-weight: 600;
+        }
+        code {
+            background: #2D2D2D;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            color: #4EC9B0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="terminal-header">
+            <div class="terminal-button btn-close"></div>
+            <div class="terminal-button btn-minimize"></div>
+            <div class="terminal-button btn-maximize"></div>
+            <div class="terminal-title">gitpolish-protocol-course/{{MODULE_PATH}}</div>
+        </div>
+        <div class="content">
+            <h1 class="slide-title">{{SLIDE_TITLE}}</h1>
+            <div class="slide-content">
+                {{SLIDE_CONTENT}}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

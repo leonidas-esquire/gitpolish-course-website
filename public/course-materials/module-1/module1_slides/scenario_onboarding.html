@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scenario 2: Onboarding a New Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Roboto+Mono:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #1E1E1E;
+            font-family: 'Source Code Pro', monospace;
+            color: #D4D4D4;
+        }
+        
+        .terminal-header {
+            background: #2D2D30;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            border-bottom: 1px solid #3E3E42;
+        }
+        
+        .window-controls {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .control-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .dot-red { background: #FF5F56; }
+        .dot-yellow { background: #FFBD2E; }
+        .dot-green { background: #27C93F; }
+        
+        .terminal-title {
+            margin-left: 20px;
+            font-size: 13px;
+            color: #CCCCCC;
+            font-family: 'Roboto Mono', monospace;
+        }
+        
+        .content-area {
+            display: flex;
+            min-height: 685px;
+        }
+        
+        .left-panel {
+            flex: 1.5;
+            padding: 45px 50px;
+            border-right: 1px solid #3E3E42;
+        }
+        
+        .right-panel {
+            flex: 1;
+            padding: 45px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .scenario-header {
+            font-family: 'Fira Code', monospace;
+            font-size: 28px;
+            font-weight: 700;
+            color: #4EC9B0;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+        
+        .scenario-number {
+            color: #569CD6;
+            font-size: 18px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .info-section {
+            margin-bottom: 22px;
+        }
+        
+        .section-label {
+            font-family: 'Fira Code', monospace;
+            font-size: 13px;
+            color: #569CD6;
+            font-weight: 600;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .section-content {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 15px;
+            color: #D4D4D4;
+            line-height: 1.6;
+        }
+        
+        .highlight {
+            color: #4EC9B0;
+            font-weight: 600;
+        }
+        
+        .action-list {
+            color: #CE9178;
+        }
+        
+        .warning {
+            color: #F48771;
+        }
+        
+        .visual-container {
+            width: 100%;
+            max-width: 420px;
+        }
+        
+        .visual-image {
+            width: 100%;
+            height: auto;
+        }
+        
+        .panel-label {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            color: #858585;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="terminal-header">
+            <div class="window-controls">
+                <div class="control-dot dot-red"></div>
+                <div class="control-dot dot-yellow"></div>
+                <div class="control-dot dot-green"></div>
+            </div>
+            <div class="terminal-title">scenario_02_onboarding.log — Module 1</div>
+        </div>
+        
+        <div class="content-area">
+            <div class="left-panel">
+                <h2 class="scenario-header">
+                    <span class="scenario-number">// SCENARIO 02</span>
+                    Onboarding a New Developer to a Client Project
+                </h2>
+                
+                <div class="info-section">
+                    <div class="section-label">Situation</div>
+                    <div class="section-content">
+                        A new developer is joining the team, and you need to get them <span class="highlight">up to speed quickly and efficiently</span>. Effective onboarding accelerates productivity and ensures consistent practices across the team.
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <div class="section-label">GitPolish Protocol™ Relevance</div>
+                    <div class="section-content">
+                        <span class="highlight">Documentation Excellence</span> + <span class="highlight">Knowledge Transfer</span>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <div class="section-label">Key Actions</div>
+                    <div class="section-content action-list">
+                        Grant appropriate repository access → Provide comprehensive onboarding documentation → Set up development environment with clear instructions → Assign starter task with clear expectations → Conduct thorough code review for first contribution
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <div class="section-label">Professional Impact</div>
+                    <div class="section-content">
+                        Reduces onboarding time from weeks to days, ensures consistency in coding practices, builds team cohesion, demonstrates investment in developer success.
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <div class="section-label">Common Pitfall</div>
+                    <div class="section-content warning">
+                        ⚠ Assuming developers will "figure it out"—leads to inconsistent practices, wasted time, and frustration for both new hires and team.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="visual-container">
+                    <div class="panel-label">// Knowledge Transfer</div>
+                    <img src="/home/ubuntu/upload/search_images/36n5hWSbJPff.jpg" alt="Developer Collaboration and Onboarding" class="visual-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

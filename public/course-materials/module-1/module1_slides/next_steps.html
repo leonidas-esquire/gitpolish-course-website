@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Steps: Module 2 Preview</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Roboto+Mono:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #1E1E1E;
+            font-family: 'Source Code Pro', monospace;
+            color: #D4D4D4;
+        }
+        
+        .terminal-header {
+            background: #2D2D30;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            border-bottom: 1px solid #3E3E42;
+        }
+        
+        .window-controls {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .control-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .dot-red { background: #FF5F56; }
+        .dot-yellow { background: #FFBD2E; }
+        .dot-green { background: #27C93F; }
+        
+        .terminal-title {
+            margin-left: 20px;
+            font-size: 13px;
+            color: #CCCCCC;
+            font-family: 'Roboto Mono', monospace;
+        }
+        
+        .content-area {
+            display: flex;
+            min-height: 685px;
+        }
+        
+        .left-panel {
+            flex: 1.5;
+            padding: 50px 55px;
+            border-right: 1px solid #3E3E42;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .right-panel {
+            flex: 1;
+            padding: 45px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #252526;
+        }
+        
+        .module-badge {
+            font-family: 'Fira Code', monospace;
+            font-size: 13px;
+            color: #CE9178;
+            margin-bottom: 15px;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+        
+        .module-badge::before {
+            content: '// ';
+            color: #6A9955;
+        }
+        
+        .module-title {
+            font-family: 'Fira Code', monospace;
+            font-size: 34px;
+            font-weight: 700;
+            color: #4EC9B0;
+            line-height: 1.3;
+            margin-bottom: 35px;
+        }
+        
+        .section-heading {
+            font-family: 'Fira Code', monospace;
+            font-size: 16px;
+            color: #569CD6;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .section-heading::before {
+            content: '$ ';
+            color: #4EC9B0;
+        }
+        
+        .content-section {
+            margin-bottom: 28px;
+        }
+        
+        .topic-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .topic-item {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 15px;
+            color: #D4D4D4;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .topic-item::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #4EC9B0;
+            font-weight: 600;
+        }
+        
+        .prep-item {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 15px;
+            color: #CE9178;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .prep-item::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27C93F;
+            font-weight: 600;
+        }
+        
+        .call-to-action {
+            font-family: 'Fira Code', monospace;
+            font-size: 15px;
+            color: #DCDCAA;
+            margin-top: 25px;
+            padding: 15px 20px;
+            background: #2D2D30;
+            border-left: 3px solid #4EC9B0;
+        }
+        
+        .screenshot-container {
+            width: 100%;
+            max-width: 450px;
+            border: 1px solid #3E3E42;
+        }
+        
+        .screenshot-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .screenshot-caption {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            color: #858585;
+            text-align: center;
+            padding: 8px;
+            background: #2D2D30;
+            border-top: 1px solid #3E3E42;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="terminal-header">
+            <div class="window-controls">
+                <div class="control-dot dot-red"></div>
+                <div class="control-dot dot-yellow"></div>
+                <div class="control-dot dot-green"></div>
+            </div>
+            <div class="terminal-title">next_steps.md — Module 2 Preview</div>
+        </div>
+        
+        <div class="content-area">
+            <div class="left-panel">
+                <div class="module-badge">COMING UP NEXT</div>
+                <h2 class="module-title">Module 2: Documentation & Collaboration</h2>
+                
+                <div class="content-section">
+                    <div class="section-heading">What You'll Learn</div>
+                    <ul class="topic-list">
+                        <li class="topic-item">Advanced documentation strategies beyond the README</li>
+                        <li class="topic-item">Code review best practices and constructive feedback</li>
+                        <li class="topic-item">Pull request workflows and merge strategies</li>
+                        <li class="topic-item">Team collaboration tools and communication patterns</li>
+                        <li class="topic-item">Documentation as code: keeping docs in sync with development</li>
+                    </ul>
+                </div>
+                
+                <div class="content-section">
+                    <div class="section-heading">How to Prepare</div>
+                    <ul class="topic-list">
+                        <li class="prep-item">Review and complete Module 1 labs if not finished</li>
+                        <li class="prep-item">Practice writing clear, concise documentation</li>
+                        <li class="prep-item">Familiarize yourself with pull request workflows on GitHub</li>
+                    </ul>
+                </div>
+                
+                <div class="call-to-action">
+                    Ready to level up your collaboration skills? Module 2 builds on your foundation to create truly professional team workflows.
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="screenshot-container">
+                    <img src="/home/ubuntu/upload/search_images/zRcqCUe0X42r.png" alt="Code Documentation Example" class="screenshot-image">
+                    <div class="screenshot-caption">// Documentation & code working together</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1 Knowledge Check</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Roboto+Mono:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #1E1E1E;
+            font-family: 'Source Code Pro', monospace;
+            color: #D4D4D4;
+        }
+        
+        .terminal-header {
+            background: #2D2D30;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            border-bottom: 1px solid #3E3E42;
+        }
+        
+        .window-controls {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .control-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .dot-red { background: #FF5F56; }
+        .dot-yellow { background: #FFBD2E; }
+        .dot-green { background: #27C93F; }
+        
+        .terminal-title {
+            margin-left: 20px;
+            font-size: 13px;
+            color: #CCCCCC;
+            font-family: 'Roboto Mono', monospace;
+        }
+        
+        .content-area {
+            min-height: 685px;
+            padding: 25px 90px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .section-header {
+            font-family: 'Fira Code', monospace;
+            font-size: 28px;
+            font-weight: 700;
+            color: #4EC9B0;
+            margin-bottom: 3px;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 15px;
+            color: #858585;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .questions-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            flex: 1;
+        }
+        
+        .question-box {
+            background: #252526;
+            border: 1px solid #3E3E42;
+            padding: 14px 16px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .question-number {
+            font-family: 'Fira Code', monospace;
+            font-size: 12px;
+            color: #569CD6;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .question-text {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 14px;
+            color: #D4D4D4;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+        
+        .answer-options {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        
+        .answer-option {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 13px;
+            color: #CE9178;
+            padding-left: 18px;
+            position: relative;
+            line-height: 1.3;
+        }
+        
+        .answer-option::before {
+            content: attr(data-letter);
+            position: absolute;
+            left: 0;
+            color: #569CD6;
+            font-weight: 600;
+        }
+        
+        .instructions {
+            font-family: 'Fira Code', monospace;
+            font-size: 12px;
+            color: #6A9955;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="terminal-header">
+            <div class="window-controls">
+                <div class="control-dot dot-red"></div>
+                <div class="control-dot dot-yellow"></div>
+                <div class="control-dot dot-green"></div>
+            </div>
+            <div class="terminal-title">knowledge_check.test — Module 1 Assessment</div>
+        </div>
+        
+        <div class="content-area">
+            <h2 class="section-header">Module 1 Knowledge Check</h2>
+            <p class="section-subtitle">// Test Your Understanding</p>
+            
+            <div class="questions-container">
+                <div class="question-box">
+                    <div class="question-number">QUESTION 01</div>
+                    <div class="question-text">Which two GitPolish Protocol™ pillars are the primary focus of Module 1?</div>
+                    <div class="answer-options">
+                        <div class="answer-option" data-letter="A)">Repository Architecture & Documentation Excellence</div>
+                        <div class="answer-option" data-letter="B)">Code Quality & Security</div>
+                        <div class="answer-option" data-letter="C)">Collaboration & Automation</div>
+                        <div class="answer-option" data-letter="D)">Testing & Deployment</div>
+                    </div>
+                </div>
+                
+                <div class="question-box">
+                    <div class="question-number">QUESTION 02</div>
+                    <div class="question-text">What is the primary purpose of branch protection rules?</div>
+                    <div class="answer-options">
+                        <div class="answer-option" data-letter="A)">To make repositories private</div>
+                        <div class="answer-option" data-letter="B)">To prevent direct pushes and require reviews</div>
+                        <div class="answer-option" data-letter="C)">To automatically merge pull requests</div>
+                        <div class="answer-option" data-letter="D)">To delete old branches</div>
+                    </div>
+                </div>
+                
+                <div class="question-box">
+                    <div class="question-number">QUESTION 03</div>
+                    <div class="question-text">Which section is NOT typically included in a professional README.md?</div>
+                    <div class="answer-options">
+                        <div class="answer-option" data-letter="A)">Installation instructions</div>
+                        <div class="answer-option" data-letter="B)">Usage examples</div>
+                        <div class="answer-option" data-letter="C)">Developer's personal blog</div>
+                        <div class="answer-option" data-letter="D)">Contributing guidelines</div>
+                    </div>
+                </div>
+                
+                <div class="question-box">
+                    <div class="question-number">QUESTION 04</div>
+                    <div class="question-text">What is a key benefit of using GitHub Issues for feature requests?</div>
+                    <div class="answer-options">
+                        <div class="answer-option" data-letter="A)">They automatically implement features</div>
+                        <div class="answer-option" data-letter="B)">They provide transparency and audit trail</div>
+                        <div class="answer-option" data-letter="C)">They replace all project documentation</div>
+                        <div class="answer-option" data-letter="D)">They eliminate the need for meetings</div>
+                    </div>
+                </div>
+                
+                <div class="question-box">
+                    <div class="question-number">QUESTION 05</div>
+                    <div class="question-text">Why should you use repository templates for multiple client projects?</div>
+                    <div class="answer-options">
+                        <div class="answer-option" data-letter="A)">To make all projects identical</div>
+                        <div class="answer-option" data-letter="B)">To ensure consistency and save time</div>
+                        <div class="answer-option" data-letter="C)">To prevent clients from accessing code</div>
+                        <div class="answer-option" data-letter="D)">To automatically deploy projects</div>
+                    </div>
+                </div>
+                
+                <div class="question-box">
+                    <div class="question-number">QUESTION 06</div>
+                    <div class="question-text">What is the principle of least privilege in access control?</div>
+                    <div class="answer-options">
+                        <div class="answer-option" data-letter="A)">Give everyone admin access for convenience</div>
+                        <div class="answer-option" data-letter="B)">Grant only the minimum permissions needed</div>
+                        <div class="answer-option" data-letter="C)">Restrict all access to one person</div>
+                        <div class="answer-option" data-letter="D)">Allow read-only access to everyone</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="instructions">// Answers: 1-A, 2-B, 3-C, 4-B, 5-B, 6-B</div>
+        </div>
+    </div>
+</body>
+</html>

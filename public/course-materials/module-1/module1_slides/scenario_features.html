@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scenario 3: Managing Feature Requests</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Roboto+Mono:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #1E1E1E;
+            font-family: 'Source Code Pro', monospace;
+            color: #D4D4D4;
+        }
+        
+        .terminal-header {
+            background: #2D2D30;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            border-bottom: 1px solid #3E3E42;
+        }
+        
+        .window-controls {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .control-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .dot-red { background: #FF5F56; }
+        .dot-yellow { background: #FFBD2E; }
+        .dot-green { background: #27C93F; }
+        
+        .terminal-title {
+            margin-left: 20px;
+            font-size: 13px;
+            color: #CCCCCC;
+            font-family: 'Roboto Mono', monospace;
+        }
+        
+        .content-area {
+            display: flex;
+            min-height: 685px;
+        }
+        
+        .left-panel {
+            flex: 1.5;
+            padding: 45px 50px;
+            border-right: 1px solid #3E3E42;
+        }
+        
+        .right-panel {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #252526;
+        }
+        
+        .scenario-header {
+            font-family: 'Fira Code', monospace;
+            font-size: 28px;
+            font-weight: 700;
+            color: #4EC9B0;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+        
+        .scenario-number {
+            color: #569CD6;
+            font-size: 18px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .info-section {
+            margin-bottom: 22px;
+        }
+        
+        .section-label {
+            font-family: 'Fira Code', monospace;
+            font-size: 13px;
+            color: #569CD6;
+            font-weight: 600;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .section-content {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 15px;
+            color: #D4D4D4;
+            line-height: 1.6;
+        }
+        
+        .highlight {
+            color: #4EC9B0;
+            font-weight: 600;
+        }
+        
+        .action-list {
+            color: #CE9178;
+        }
+        
+        .warning {
+            color: #F48771;
+        }
+        
+        .screenshot-container {
+            width: 100%;
+            max-width: 450px;
+            border: 1px solid #3E3E42;
+        }
+        
+        .screenshot-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .screenshot-caption {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            color: #858585;
+            text-align: center;
+            padding: 8px;
+            background: #2D2D30;
+            border-top: 1px solid #3E3E42;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="terminal-header">
+            <div class="window-controls">
+                <div class="control-dot dot-red"></div>
+                <div class="control-dot dot-yellow"></div>
+                <div class="control-dot dot-green"></div>
+            </div>
+            <div class="terminal-title">scenario_03_features.log — Module 1</div>
+        </div>
+        
+        <div class="content-area">
+            <div class="left-panel">
+                <h2 class="scenario-header">
+                    <span class="scenario-number">// SCENARIO 03</span>
+                    Managing Feature Requests and Enhancements
+                </h2>
+                
+                <div class="info-section">
+                    <div class="section-label">Situation</div>
+                    <div class="section-content">
+                        The client has requested several new features, and you need to <span class="highlight">organize and prioritize</span> them effectively. Without a structured system, feature requests can become overwhelming and lead to miscommunication.
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <div class="section-label">GitPolish Protocol™ Relevance</div>
+                    <div class="section-content">
+                        <span class="highlight">Repository Architecture</span> + <span class="highlight">Documentation Excellence</span>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <div class="section-label">Key Actions</div>
+                    <div class="section-content action-list">
+                        Create detailed GitHub Issues for each feature → Use labels for categorization (enhancement, high-priority, etc.) → Create milestones for releases → Prioritize with client input → Assign to team members → Track progress with project boards
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <div class="section-label">Professional Impact</div>
+                    <div class="section-content">
+                        Provides <span class="highlight">transparency</span> for all stakeholders, enables effective project management, keeps client informed of progress, creates audit trail for decisions, facilitates team coordination.
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <div class="section-label">Common Pitfall</div>
+                    <div class="section-content warning">
+                        ⚠ Managing features in email or chat—leads to lost requests, miscommunication, and no historical record of decisions.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="screenshot-container">
+                    <img src="/home/ubuntu/upload/search_images/mPjWod4S6AuP.webp" alt="GitHub Issues and Project Board" class="screenshot-image">
+                    <div class="screenshot-caption">// GitHub Issues tracking system</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

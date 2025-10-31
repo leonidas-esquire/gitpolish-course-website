@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hands-On Lab 1.2</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Roboto+Mono:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #1E1E1E;
+            font-family: 'Source Code Pro', monospace;
+            color: #D4D4D4;
+        }
+        
+        .terminal-header {
+            background: #2D2D30;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            border-bottom: 1px solid #3E3E42;
+        }
+        
+        .window-controls {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .control-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .dot-red { background: #FF5F56; }
+        .dot-yellow { background: #FFBD2E; }
+        .dot-green { background: #27C93F; }
+        
+        .terminal-title {
+            margin-left: 20px;
+            font-size: 13px;
+            color: #CCCCCC;
+            font-family: 'Roboto Mono', monospace;
+        }
+        
+        .content-area {
+            min-height: 685px;
+            padding: 35px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        
+        .lab-header {
+            margin-bottom: 25px;
+        }
+        
+        .lab-badge {
+            font-family: 'Fira Code', monospace;
+            font-size: 14px;
+            color: #CE9178;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        
+        .lab-badge::before {
+            content: '$ ';
+            color: #4EC9B0;
+        }
+        
+        .lab-title {
+            font-family: 'Fira Code', monospace;
+            font-size: 32px;
+            font-weight: 700;
+            color: #4EC9B0;
+            margin-bottom: 0;
+        }
+        
+        .lab-sections {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .lab-section {
+            background: #252526;
+            border: 1px solid #3E3E42;
+            padding: 18px 20px;
+        }
+        
+        .section-label {
+            font-family: 'Fira Code', monospace;
+            font-size: 14px;
+            color: #569CD6;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section-label::before {
+            content: '> ';
+            color: #4EC9B0;
+        }
+        
+        .section-content {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 16px;
+            color: #D4D4D4;
+            line-height: 1.6;
+        }
+        
+        .objective-text {
+            color: #4EC9B0;
+            font-weight: 600;
+        }
+        
+        .requirement-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .requirement-item {
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .requirement-item::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #569CD6;
+        }
+        
+        .criteria-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .criteria-item {
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .criteria-item::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27C93F;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .info-label {
+            font-family: 'Fira Code', monospace;
+            font-size: 12px;
+            color: #858585;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        
+        .info-value {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 18px;
+            color: #CE9178;
+            font-weight: 600;
+        }
+        
+        .tools-list {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .tool-tag {
+            background: #2D2D30;
+            border: 1px solid #569CD6;
+            padding: 6px 14px;
+            font-family: 'Source Code Pro', monospace;
+            font-size: 14px;
+            color: #569CD6;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="terminal-header">
+            <div class="window-controls">
+                <div class="control-dot dot-red"></div>
+                <div class="control-dot dot-yellow"></div>
+                <div class="control-dot dot-green"></div>
+            </div>
+            <div class="terminal-title">lab_1.2_readme.md — Module 1 Labs</div>
+        </div>
+        
+        <div class="content-area">
+            <div class="lab-header">
+                <div class="lab-badge">LAB 1.2 — HANDS-ON PRACTICE</div>
+                <h2 class="lab-title">Writing a Professional README</h2>
+            </div>
+            
+            <div class="lab-sections">
+                <div class="lab-section">
+                    <div class="section-label">Objective</div>
+                    <div class="section-content">
+                        <span class="objective-text">Create a comprehensive README.md</span> for "WeatherNow API," a fictional weather data service, demonstrating mastery of Documentation Excellence.
+                    </div>
+                </div>
+                
+                <div class="lab-section">
+                    <div class="section-label">Scenario</div>
+                    <div class="section-content">
+                        Build professional documentation for a weather API service that developers will use to integrate weather data into their applications.
+                    </div>
+                </div>
+                
+                <div class="lab-section">
+                    <div class="section-label">Key Requirements</div>
+                    <div class="section-content">
+                        <ul class="requirement-list">
+                            <li class="requirement-item">Project description and features</li>
+                            <li class="requirement-item">Installation and setup instructions</li>
+                            <li class="requirement-item">API endpoints documentation</li>
+                            <li class="requirement-item">Authentication guide</li>
+                            <li class="requirement-item">Code examples and usage</li>
+                            <li class="requirement-item">Troubleshooting section</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="lab-section">
+                    <div class="section-label">Success Criteria</div>
+                    <div class="section-content">
+                        <ul class="criteria-list">
+                            <li class="criteria-item">All essential sections present</li>
+                            <li class="criteria-item">Clear, actionable examples</li>
+                            <li class="criteria-item">Proper Markdown formatting</li>
+                            <li class="criteria-item">Professional tone throughout</li>
+                            <li class="criteria-item">Easy to navigate structure</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">Time Required</div>
+                    <div class="info-value">45 minutes</div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-label">Tools Needed</div>
+                    <div class="tools-list">
+                        <span class="tool-tag">Text Editor</span>
+                        <span class="tool-tag">Markdown Knowledge</span>
+                        <span class="tool-tag">GitHub (optional)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

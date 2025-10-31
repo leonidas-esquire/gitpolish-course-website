@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1 Resources & References</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Roboto+Mono:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #1E1E1E;
+            font-family: 'Source Code Pro', monospace;
+            color: #D4D4D4;
+        }
+        
+        .terminal-header {
+            background: #2D2D30;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            border-bottom: 1px solid #3E3E42;
+        }
+        
+        .window-controls {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .control-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .dot-red { background: #FF5F56; }
+        .dot-yellow { background: #FFBD2E; }
+        .dot-green { background: #27C93F; }
+        
+        .terminal-title {
+            margin-left: 20px;
+            font-size: 13px;
+            color: #CCCCCC;
+            font-family: 'Roboto Mono', monospace;
+        }
+        
+        .content-area {
+            min-height: 685px;
+            padding: 28px 80px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .section-header {
+            font-family: 'Fira Code', monospace;
+            font-size: 28px;
+            font-weight: 700;
+            color: #4EC9B0;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 15px;
+            color: #858585;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            flex: 1;
+        }
+        
+        .resource-category {
+            background: #252526;
+            border: 1px solid #3E3E42;
+            padding: 15px 18px;
+        }
+        
+        .category-label {
+            font-family: 'Fira Code', monospace;
+            font-size: 13px;
+            color: #569CD6;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .category-label::before {
+            content: '// ';
+            color: #6A9955;
+        }
+        
+        .resource-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .resource-item {
+            margin-bottom: 7px;
+            padding-left: 18px;
+            position: relative;
+        }
+        
+        .resource-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .resource-item::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #4EC9B0;
+            font-size: 13px;
+        }
+        
+        .resource-name {
+            font-family: 'Fira Code', monospace;
+            font-size: 14px;
+            color: #CE9178;
+            font-weight: 600;
+        }
+        
+        .resource-description {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 12px;
+            color: #858585;
+            line-height: 1.3;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="terminal-header">
+            <div class="window-controls">
+                <div class="control-dot dot-red"></div>
+                <div class="control-dot dot-yellow"></div>
+                <div class="control-dot dot-green"></div>
+            </div>
+            <div class="terminal-title">resources.md — Module 1 References</div>
+        </div>
+        
+        <div class="content-area">
+            <h2 class="section-header">Module 1 Resources & References</h2>
+            <p class="section-subtitle">// Continue Your Learning Journey</p>
+            
+            <div class="resources-grid">
+                <div class="resource-category">
+                    <div class="category-label">Official Documentation</div>
+                    <ul class="resource-list">
+                        <li class="resource-item">
+                            <div class="resource-name">GitHub Docs</div>
+                            <div class="resource-description">Comprehensive official documentation for all GitHub features</div>
+                        </li>
+                        <li class="resource-item">
+                            <div class="resource-name">Git Documentation</div>
+                            <div class="resource-description">Complete reference for Git commands and workflows</div>
+                        </li>
+                        <li class="resource-item">
+                            <div class="resource-name">Markdown Guide</div>
+                            <div class="resource-description">Master Markdown syntax for professional documentation</div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category">
+                    <div class="category-label">Learning Platforms</div>
+                    <ul class="resource-list">
+                        <li class="resource-item">
+                            <div class="resource-name">GitHub Skills</div>
+                            <div class="resource-description">Interactive courses for hands-on GitHub practice</div>
+                        </li>
+                        <li class="resource-item">
+                            <div class="resource-name">Git Immersion</div>
+                            <div class="resource-description">Guided tour through Git fundamentals with exercises</div>
+                        </li>
+                        <li class="resource-item">
+                            <div class="resource-name">Learn Git Branching</div>
+                            <div class="resource-description">Visual interactive tool for understanding Git branching</div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category">
+                    <div class="category-label">Tools & Extensions</div>
+                    <ul class="resource-list">
+                        <li class="resource-item">
+                            <div class="resource-name">GitHub CLI (gh)</div>
+                            <div class="resource-description">Command-line interface for GitHub operations</div>
+                        </li>
+                        <li class="resource-item">
+                            <div class="resource-name">GitKraken</div>
+                            <div class="resource-description">Visual Git client for easier repository management</div>
+                        </li>
+                        <li class="resource-item">
+                            <div class="resource-name">VS Code Git Extensions</div>
+                            <div class="resource-description">GitLens and GitHub Pull Requests for enhanced workflow</div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category">
+                    <div class="category-label">Community Resources</div>
+                    <ul class="resource-list">
+                        <li class="resource-item">
+                            <div class="resource-name">GitHub Community Forum</div>
+                            <div class="resource-description">Ask questions and connect with other developers</div>
+                        </li>
+                        <li class="resource-item">
+                            <div class="resource-name">Stack Overflow</div>
+                            <div class="resource-description">Search for Git and GitHub-related solutions</div>
+                        </li>
+                        <li class="resource-item">
+                            <div class="resource-name">Dev.to #git</div>
+                            <div class="resource-description">Articles and tutorials from the developer community</div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category">
+                    <div class="category-label">Books & Articles</div>
+                    <ul class="resource-list">
+                        <li class="resource-item">
+                            <div class="resource-name">Pro Git (Free eBook)</div>
+                            <div class="resource-description">Comprehensive guide to Git by Scott Chacon</div>
+                        </li>
+                        <li class="resource-item">
+                            <div class="resource-name">GitHub Guides</div>
+                            <div class="resource-description">Official guides on workflows and best practices</div>
+                        </li>
+                        <li class="resource-item">
+                            <div class="resource-name">Awesome README</div>
+                            <div class="resource-description">Curated list of excellent README examples</div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category">
+                    <div class="category-label">Practice Repositories</div>
+                    <ul class="resource-list">
+                        <li class="resource-item">
+                            <div class="resource-name">First Contributions</div>
+                            <div class="resource-description">Beginner-friendly repo for practicing pull requests</div>
+                        </li>
+                        <li class="resource-item">
+                            <div class="resource-name">Good First Issue</div>
+                            <div class="resource-description">Find open source projects welcoming new contributors</div>
+                        </li>
+                        <li class="resource-item">
+                            <div class="resource-name">Exercism</div>
+                            <div class="resource-description">Practice coding with Git workflow integration</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

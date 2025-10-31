@@ -1,0 +1,180 @@
+{
+  "project_info": {
+    "title": "Module 1: GitPolish Foundations & Repository Setup",
+    "created": 1761806758.8038907,
+    "last_updated": 1761807250.300425,
+    "total_slides": 21
+  },
+  "slides": {
+    "title_slide": "edited",
+    "repository_transformation": "edited",
+    "learning_objectives": "edited",
+    "learning_objectives_cont": "edited",
+    "pillar_architecture": "edited",
+    "pillar_documentation": "edited",
+    "scenario_kickoff": "edited",
+    "lab_create_repo": "edited",
+    "scenario_onboarding": "edited",
+    "scenario_features": "edited",
+    "github_issues_mastery": "edited",
+    "scenario_standards": "edited",
+    "scenario_permissions": "edited",
+    "scenario_readme": "edited",
+    "readme_anatomy": "edited",
+    "lab_readme": "edited",
+    "knowledge_check": "edited",
+    "key_takeaways": "edited",
+    "next_steps": "edited",
+    "resources": "edited",
+    "closing": "edited"
+  },
+  "outline": [
+    {
+      "id": "title_slide",
+      "title": "Module 1: GitPolish Foundations & Repository Setup",
+      "summary": "Title slide introducing Module 1 with course branding and professional developer aesthetic",
+      "image_plan": "/home/ubuntu/upload/search_images/mdg9NjCpEFM1.gif - The slide is a title slide about GitPolish Foundations and Repository Setup. Image 3 is a dark-themed screenshot of a GitHub-like interface showing a project setup, which visually represents the theme of the module.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "repository_transformation",
+      "title": "Professional Repository Management Transforms Code Storage Into Strategic Assets",
+      "summary": "Explains how the GitPolish Protocol elevates repositories from functional to professional, with key statistics on efficiency gains",
+      "image_plan": "/home/ubuntu/upload/search_images/AI3ChrukOjkU.webp - The slide discusses professional repository management, collaboration, and strategic assets. Image 4 is an illustration of people collaborating around a central idea/lightbulb, which aligns with the theme of strategic collaboration and project success.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "learning_objectives",
+      "title": "Module 1 Learning Objectives - Part 1",
+      "summary": "First three learning objectives presented in code-style format: creating professional repositories from scratch, onboarding developers efficiently, and managing feature requests with GitHub Issues. Formatted as a JavaScript class with methods representing each skill.",
+      "image_plan": "No images required - text-only slide with code formatting",
+      "slide_template_key": ""
+    },
+    {
+      "id": "learning_objectives_cont",
+      "title": "Module 1 Learning Objectives - Part 2",
+      "summary": "Remaining three learning objectives: writing professional README documentation, applying GitPolish Protocol pillars (Repository Architecture and Documentation Excellence), and transforming basic Git knowledge into professional repository management skills. Continues the JavaScript class format from Part 1.",
+      "slide_template_key": "",
+      "image_plan": "No images required - text-only slide with code formatting"
+    },
+    {
+      "id": "pillar_architecture",
+      "title": "Repository Architecture: The Foundation of Scalable Project Organization",
+      "summary": "Deep dive into the first pillar of GitPolish Protocol, explaining how proper architecture prevents technical debt",
+      "image_plan": "/home/ubuntu/upload/search_images/l6WtmL3QI8Pv.png - The slide is about Repository Architecture, the first pillar. Image 14 is a complex diagram related to architecture and repositories, which is highly relevant to the concept of foundational structure.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "pillar_documentation",
+      "title": "Documentation Excellence Makes Repositories Accessible to All Stakeholders",
+      "summary": "Explores the second pillar, showing how comprehensive documentation accelerates onboarding and reduces support burden",
+      "image_plan": "/home/ubuntu/upload/search_images/YCP2avUZ6UHs.webp - The slide is about Documentation Excellence, the second pillar. Image 11 is a screenshot of a professional-looking documentation page, directly illustrating the concept.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "scenario_kickoff",
+      "title": "Scenario 1: New Client Project Kick-Off and Repository Creation",
+      "summary": "Real-world application showing how to create a professional repository from scratch for a new client project",
+      "image_plan": "/home/ubuntu/upload/search_images/8OWzebVw6ZKb.png - This scenario is about a new client project kick-off and repository creation, which involves team interaction and setup. Image 5 shows two people working together in an office environment, representing the start of a project or team collaboration.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "lab_create_repo",
+      "title": "Hands-On Lab 1.1: Creating Your First Professional Repository",
+      "summary": "Practical exercise where students create a repository with all professional elements for a fictional client",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "scenario_onboarding",
+      "title": "Scenario 2: Onboarding a New Developer to a Client Project",
+      "summary": "Demonstrates systematic developer onboarding process that reduces time from weeks to days",
+      "image_plan": "/home/ubuntu/upload/search_images/36n5hWSbJPff.jpg - This scenario is about onboarding a new developer and knowledge transfer. Image 6 is a diagram about collaboration in software engineering, which relates to onboarding and knowledge sharing.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "scenario_features",
+      "title": "Scenario 3: Managing Feature Requests and Enhancements",
+      "summary": "Shows how to use GitHub Issues to organize, prioritize, and track client feature requests effectively",
+      "image_plan": "/home/ubuntu/upload/search_images/mPjWod4S6AuP.webp - This scenario is about managing feature requests and enhancements, which is done through GitHub Issues. Image 2 is a screenshot showing a detailed GitHub project board/issue tracker, which is highly relevant.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "github_issues_mastery",
+      "title": "GitHub Issues Are the Command Center for Project Management",
+      "summary": "Comprehensive guide to professional issue management including templates, labels, and milestones",
+      "image_plan": "/home/ubuntu/upload/Screenshot2025-10-28at11.16.42PM.png - The slide is about GitHub Issues being the command center for project management. Image 1 is a clean screenshot of a GitHub Issues/Project planning interface, visually supporting the content. (Note: Image 1 is from the second grid, not the first grid's image #1)",
+      "slide_template_key": ""
+    },
+    {
+      "id": "scenario_standards",
+      "title": "Scenario 8: Managing Multiple Client Projects with Consistent Standards",
+      "summary": "Explains how to maintain consistency across multiple repositories using templates and automation",
+      "image_plan": "/home/ubuntu/upload/search_images/ATcpIDly5bI0.png - This scenario is about managing multiple client projects with consistent standards, which relates to architectural templates and consistency. Image 16 is another architectural diagram, reinforcing the concept of structure and standards across systems.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "scenario_permissions",
+      "title": "Scenario 13: Managing Repository Permissions and Access Control",
+      "summary": "Covers security best practices for protecting client intellectual property through proper access control",
+      "image_plan": "/home/ubuntu/upload/search_images/5sWILyMKVPoM.jpg - This scenario is about managing repository permissions and access control. Image 7 is a complex diagram showing various interconnected systems and data flows, which can visually represent the complexity of access control and system security.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "scenario_readme",
+      "title": "Scenario 27: Creating a Professional README for Client Projects",
+      "summary": "Details the importance of README as the repository's front door and key components for professionalism",
+      "image_plan": "/home/ubuntu/upload/search_images/tCt3cQOqAgxq.png - This scenario is about creating a professional README.md, the front door to the repository. Image 10 is a screenshot of a professional README.md file, directly illustrating the topic.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "readme_anatomy",
+      "title": "Anatomy of a Professional README.md",
+      "summary": "Visual breakdown of essential README sections with examples and best practices",
+      "image_plan": "/home/ubuntu/upload/search_images/5cadJjyMkxyV.png - The slide details the anatomy of a professional README.md. Image 12 is a screenshot showing the structure and content of a documentation page, which aligns with the anatomy of a README.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "lab_readme",
+      "title": "Hands-On Lab 1.2: Writing a Professional README",
+      "summary": "Practice exercise for creating comprehensive README documentation for a weather API project",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "knowledge_check",
+      "title": "Module 1 Knowledge Check",
+      "summary": "Assessment questions covering key concepts from Repository Architecture and Documentation Excellence",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "key_takeaways",
+      "title": "Module 1 Key Takeaways",
+      "summary": "Summary of core lessons learned about professional repository management and GitPolish Protocol principles",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "next_steps",
+      "title": "Next Steps: Module 2 Preview",
+      "summary": "Preview of upcoming module on Documentation & Collaboration with preparation guidance",
+      "image_plan": "/home/ubuntu/upload/search_images/zRcqCUe0X42r.png - The slide is a preview for Module 2: Documentation & Collaboration. Image 8 is a screenshot of code documentation (code snippets with comments), which is a core component of documentation and collaboration.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "resources",
+      "title": "Module 1 Resources & References",
+      "summary": "Curated list of additional learning materials, documentation, and tools for continued study",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "closing",
+      "title": "Module 1 Complete",
+      "summary": "Closing slide congratulating students and directing them to Module 2",
+      "image_plan": "",
+      "slide_template_key": ""
+    }
+  ]
+}

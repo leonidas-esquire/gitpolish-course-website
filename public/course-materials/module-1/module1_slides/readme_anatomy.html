@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomy of a Professional README.md</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Roboto+Mono:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #1E1E1E;
+            font-family: 'Source Code Pro', monospace;
+            color: #D4D4D4;
+        }
+        
+        .terminal-header {
+            background: #2D2D30;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            border-bottom: 1px solid #3E3E42;
+        }
+        
+        .window-controls {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .control-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .dot-red { background: #FF5F56; }
+        .dot-yellow { background: #FFBD2E; }
+        .dot-green { background: #27C93F; }
+        
+        .terminal-title {
+            margin-left: 20px;
+            font-size: 13px;
+            color: #CCCCCC;
+            font-family: 'Roboto Mono', monospace;
+        }
+        
+        .content-area {
+            display: flex;
+            min-height: 685px;
+        }
+        
+        .left-panel {
+            flex: 1.3;
+            padding: 45px 50px;
+            border-right: 1px solid #3E3E42;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .right-panel {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #252526;
+        }
+        
+        .section-label {
+            font-family: 'Fira Code', monospace;
+            font-size: 13px;
+            color: #CE9178;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        
+        .section-label::before {
+            content: '// ';
+            color: #6A9955;
+        }
+        
+        .slide-title {
+            font-family: 'Fira Code', monospace;
+            font-size: 30px;
+            font-weight: 700;
+            color: #4EC9B0;
+            line-height: 1.3;
+            margin-bottom: 30px;
+        }
+        
+        .readme-section {
+            margin-bottom: 16px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .readme-section::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #569CD6;
+            font-size: 16px;
+        }
+        
+        .section-name {
+            font-family: 'Fira Code', monospace;
+            font-size: 16px;
+            color: #4EC9B0;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+        
+        .section-description {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 14px;
+            color: #858585;
+            line-height: 1.5;
+        }
+        
+        .screenshot-container {
+            width: 100%;
+            max-width: 480px;
+            border: 1px solid #3E3E42;
+        }
+        
+        .screenshot-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+        
+        .screenshot-caption {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            color: #858585;
+            text-align: center;
+            padding: 8px;
+            background: #2D2D30;
+            border-top: 1px solid #3E3E42;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="terminal-header">
+            <div class="window-controls">
+                <div class="control-dot dot-red"></div>
+                <div class="control-dot dot-yellow"></div>
+                <div class="control-dot dot-green"></div>
+            </div>
+            <div class="terminal-title">readme_anatomy.md — Module 1</div>
+        </div>
+        
+        <div class="content-area">
+            <div class="left-panel">
+                <div class="section-label">Essential Components</div>
+                <h2 class="slide-title">Anatomy of a Professional README.md</h2>
+                
+                <div class="readme-section">
+                    <div class="section-name">1. Project Title & Description</div>
+                    <div class="section-description">Clear, concise overview of what the project does</div>
+                </div>
+                
+                <div class="readme-section">
+                    <div class="section-name">2. Badges</div>
+                    <div class="section-description">Build status, test coverage, version indicators</div>
+                </div>
+                
+                <div class="readme-section">
+                    <div class="section-name">3. Table of Contents</div>
+                    <div class="section-description">Navigation for longer READMEs (optional but helpful)</div>
+                </div>
+                
+                <div class="readme-section">
+                    <div class="section-name">4. Installation Instructions</div>
+                    <div class="section-description">Step-by-step setup and dependency management</div>
+                </div>
+                
+                <div class="readme-section">
+                    <div class="section-name">5. Usage Examples</div>
+                    <div class="section-description">Code snippets demonstrating how to use the project</div>
+                </div>
+                
+                <div class="readme-section">
+                    <div class="section-name">6. Features</div>
+                    <div class="section-description">Key capabilities and functionality highlights</div>
+                </div>
+                
+                <div class="readme-section">
+                    <div class="section-name">7. Contributing Guidelines</div>
+                    <div class="section-description">How others can contribute to the project</div>
+                </div>
+                
+                <div class="readme-section">
+                    <div class="section-name">8. License Information</div>
+                    <div class="section-description">Legal clarity on usage rights and restrictions</div>
+                </div>
+                
+                <div class="readme-section">
+                    <div class="section-name">9. Contact & Support</div>
+                    <div class="section-description">How to get help or reach maintainers</div>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="screenshot-container">
+                    <img src="/home/ubuntu/upload/search_images/5cadJjyMkxyV.png" alt="Professional README Documentation" class="screenshot-image">
+                    <div class="screenshot-caption">// Example of professional README structure</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

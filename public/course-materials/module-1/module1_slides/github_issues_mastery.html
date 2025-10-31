@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Issues Mastery</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Roboto+Mono:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #1E1E1E;
+            font-family: 'Source Code Pro', monospace;
+            color: #D4D4D4;
+        }
+        
+        .terminal-header {
+            background: #2D2D30;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            border-bottom: 1px solid #3E3E42;
+        }
+        
+        .window-controls {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .control-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .dot-red { background: #FF5F56; }
+        .dot-yellow { background: #FFBD2E; }
+        .dot-green { background: #27C93F; }
+        
+        .terminal-title {
+            margin-left: 20px;
+            font-size: 13px;
+            color: #CCCCCC;
+            font-family: 'Roboto Mono', monospace;
+        }
+        
+        .content-area {
+            display: flex;
+            min-height: 685px;
+        }
+        
+        .left-panel {
+            flex: 1.4;
+            padding: 50px 55px;
+            border-right: 1px solid #3E3E42;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .right-panel {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #252526;
+        }
+        
+        .section-label {
+            font-family: 'Fira Code', monospace;
+            font-size: 14px;
+            color: #CE9178;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        
+        .section-label::before {
+            content: '// ';
+            color: #6A9955;
+        }
+        
+        .slide-title {
+            font-family: 'Fira Code', monospace;
+            font-size: 32px;
+            font-weight: 700;
+            color: #4EC9B0;
+            line-height: 1.4;
+            margin-bottom: 35px;
+        }
+        
+        .key-point {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 16px;
+            color: #D4D4D4;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .key-point::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #569CD6;
+            font-size: 18px;
+        }
+        
+        .highlight-term {
+            color: #4EC9B0;
+            font-weight: 600;
+        }
+        
+        .feature-list {
+            color: #569CD6;
+            font-weight: 600;
+        }
+        
+        .label-examples {
+            color: #CE9178;
+            font-style: italic;
+        }
+        
+        .screenshot-container {
+            width: 100%;
+            max-width: 480px;
+            border: 1px solid #3E3E42;
+        }
+        
+        .screenshot-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .screenshot-caption {
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            color: #858585;
+            text-align: center;
+            padding: 8px;
+            background: #2D2D30;
+            border-top: 1px solid #3E3E42;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="terminal-header">
+            <div class="window-controls">
+                <div class="control-dot dot-red"></div>
+                <div class="control-dot dot-yellow"></div>
+                <div class="control-dot dot-green"></div>
+            </div>
+            <div class="terminal-title">github_issues_mastery.md — Module 1</div>
+        </div>
+        
+        <div class="content-area">
+            <div class="left-panel">
+                <div class="section-label">Mastering Issue Management</div>
+                <h2 class="slide-title">GitHub Issues Are the Command Center for Project Management</h2>
+                
+                <div class="key-point">
+                    Issues are not just bug reports—they are <span class="feature-list">tasks, features, discussions, and documentation</span> all in one centralized location.
+                </div>
+                
+                <div class="key-point">
+                    Professional issue management includes: <span class="highlight-term">descriptive titles</span>, detailed descriptions, appropriate labels, clear acceptance criteria, and linked pull requests.
+                </div>
+                
+                <div class="key-point">
+                    <span class="highlight-term">Issue templates</span> standardize information collection and reduce back-and-forth communication, ensuring all necessary details are captured upfront.
+                </div>
+                
+                <div class="key-point">
+                    Labels enable filtering and prioritization: <span class="label-examples">bug, enhancement, documentation, high-priority, good-first-issue</span>—creating an organized taxonomy for your work.
+                </div>
+                
+                <div class="key-point">
+                    <span class="highlight-term">Milestones</span> group related issues for sprint or release planning, providing clear progress visibility and helping teams stay aligned on goals.
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="screenshot-container">
+                    <img src="/home/ubuntu/upload/Screenshot2025-10-28at11.16.42PM.png" alt="GitHub Issues Interface" class="screenshot-image">
+                    <div class="screenshot-caption">// GitHub Issues command center</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
