@@ -1,29 +1,75 @@
-name: Receive Content from Materials
+name: Receive Updates from Course Materials
 
 on:
   repository_dispatch:
-    types: [sync-from-materials]
+    types: [materials-update]
   workflow_dispatch:
 
 jobs:
-  receive-content:
+  receive-from-materials:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
     steps:
       - name: Checkout website repository
         uses: actions/checkout@v4
-        
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
         with:
-          node-version: '22'
-          
-      - name: Validate received content
+          token: ${{ secrets.SYNC_TOKEN }}
+          fetch-depth: 0
+          path: website
+      
+      - name: Checkout course materials repository
+        uses: actions/checkout@v4
+        with:
+          repository: leonidas-esquire/gitpolish-protocol-course
+          token: ${{ secrets.SYNC_TOKEN }}
+          fetch-depth: 0
+          path: materials
+      
+      - name: Sync updates from course materials
         run: |
-          echo "Content validation successful"
+          # Create target directories if they don't exist
+          mkdir -p website/public/course-materials
+          mkdir -p website/public/docs
+          mkdir -p website/public/templates
+          mkdir -p website/public/resources
           
-      - name: Rebuild if necessary
+          # Sync directories
+          rsync -av --delete materials/course-materials/ website/public/course-materials/
+          rsync -av --delete materials/docs/ website/public/docs/
+          rsync -av --delete materials/templates/ website/public/templates/
+          rsync -av --delete materials/resources/ website/public/resources/
+          
+          # Copy README
+          cp materials/README.md website/public/COURSE_README.md
+      
+      - name: Commit and push changes
+        working-directory: website
         run: |
-          if [ -f "package.json" ]; then
-            npm install
-            npm run build
+          git config user.name "GitPolish Sync Bot"
+          git config user.email "sync-bot@gitpolish-course.local"
+          
+          git add .
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "sync: Receive updates from gitpolish-protocol-course | Automated sync from course materials repository | Updated: course-materials, docs, templates, resources | Timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
           fi
+      
+      - name: Create sync report
+        if: always()
+        run: |
+          echo "## Sync Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Source**: gitpolish-protocol-course" >> $GITHUB_STEP_SUMMARY
+          echo "**Target**: gitpolish-course-website" >> $GITHUB_STEP_SUMMARY
+          echo "**Timestamp**: $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Synced Directories" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ course-materials/" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ docs/" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ templates/" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ resources/" >> $GITHUB_STEP_SUMMARY
